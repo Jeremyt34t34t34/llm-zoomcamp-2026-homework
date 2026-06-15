@@ -1,0 +1,13 @@
+[project]
+name = "llm-zoomcamp-2026-homework"
+version = "0.1.0"
+description = "Homework submissions for DataTalks.Club LLM Zoomcamp 2026"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "gitsource>=0.0.5",
+    "minsearch>=0.1.0",
+    "openai>=2.41.1",
+    "python-dotenv>=1.2.2",
+]
+
