@@ -3,9 +3,9 @@
 !.env.example
 
 .venv/
+models/
 __pycache__/
 *.py[cod]
 .ipynb_checkpoints/
 
 .DS_Store
-
