@@ -1,4 +1,5 @@
 import argparse
+from pathlib import Path
 from typing import Any
 
 import numpy as np
@@ -14,6 +15,7 @@ Q4_QUERY = "What metric do we use to evaluate a search engine?"
 Q5_QUERY = "How do I store vectors in PostgreSQL?"
 Q6_QUERY = "How do I give the model access to tools?"
 TARGET_FILENAME = "02-vector-search/lessons/07-sqlitesearch-vector.md"
+BASE_DIR = Path(__file__).resolve().parent
 
 
 def load_lesson_documents() -> list[dict[str, str]]:
@@ -74,7 +76,10 @@ def filenames(results: list[dict[str, Any]]) -> list[str]:
 
 def main() -> None:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--model-path", default="models/Xenova/all-MiniLM-L6-v2")
+    parser.add_argument(
+        "--model-path",
+        default=str(BASE_DIR / "models/Xenova/all-MiniLM-L6-v2"),
+    )
     parser.add_argument("--batch-size", type=int, default=16)
     args = parser.parse_args()
 
@@ -132,4 +137,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

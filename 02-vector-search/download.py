@@ -13,7 +13,13 @@ ONNX_CANDIDATES = [
     "model.onnx",
 ]
 
-def download(repo, dest="models"):
+BASE_DIR = Path(__file__).resolve().parent
+
+
+def download(repo, dest=None):
+    if dest is None:
+        dest = BASE_DIR / "models"
+
     dest = Path(dest) / repo
     dest.mkdir(parents=True, exist_ok=True)
 

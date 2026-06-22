@@ -23,6 +23,8 @@ Download the ONNX embedding model:
 uv run python 02-vector-search/download.py
 ```
 
+The model is downloaded to `02-vector-search/models/`, which is ignored by git.
+
 ## Run
 
 From the repository root:
@@ -31,7 +33,9 @@ From the repository root:
 uv run python 02-vector-search/hw2.py
 ```
 
+The script resolves the model path relative to its own file, so it can be run
+from the repository root as shown above.
+
 ## Final Answers
 
 See [hw2_answers.md](hw2_answers.md).
-
