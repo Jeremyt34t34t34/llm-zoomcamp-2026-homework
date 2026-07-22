@@ -7,6 +7,8 @@ models/
 __pycache__/
 *.py[cod]
 *.db
+*.duckdb
+.dlt/
 .ipynb_checkpoints/
 
 .DS_Store
